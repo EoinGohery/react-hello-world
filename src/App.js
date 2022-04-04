@@ -17,13 +17,22 @@ function App() {
   return (
     <div className="App">
 
-      <Message {...messages[0]}/>
+    {
+      messages.map(messages => {
+        return (
+                <Message {...messages}/>
+              )
+      })
+    }
+      
+
+      {/* <Message {...messages[0]}/>
 
       <Message title={messages[1].title} 
       text={messages[1].text} 
       active={messages[1].active}/>
 
-      <Message title="Message 3" text="This is message 3" active={true}/>
+      <Message title="Message 3" text="This is message 3" active={true}/> */}
 
     </div>
   );
