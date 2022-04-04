@@ -4,7 +4,7 @@ import './App.css';
 import  {Message} from './FunctionalMessageComponent';
 
 
-
+const Heading = ({text})=><h1>{text}</h1>;
 function App() {
 
   const messages = [
@@ -17,6 +17,8 @@ function App() {
 
   return (
     <div className="App">
+
+      <Heading text="Heading"/>
 
     {
       messages.map(messages => <Message {...messages}/>)

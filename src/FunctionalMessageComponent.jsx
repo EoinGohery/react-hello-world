@@ -10,7 +10,9 @@ export const Message = ({title, text, active}) => {
     }
 
     return (
-        <div className="message">
+        // <div className={act ? "message active" : "message"}>
+        // <div className={`message ${act ? "active" : "" }`}>
+        <div className={`message ${act && "active"}`}>
             <h1 onClick={onClick}>{title}</h1>
             {act && <p>{text}</p>}
         </div>
