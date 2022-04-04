@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+//import Message from './MessageComponent';
+import  {Message} from './FunctionalMessageComponent';
+
+
 
 function App() {
+
+  let active = false;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Message title="Message 1" text="This is message 1" active={active}/>
+
+      <Message title="Message 2" text="This is message 2" active={true}/>
+
     </div>
   );
 }
