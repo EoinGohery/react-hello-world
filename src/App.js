@@ -9,7 +9,8 @@ function App() {
 
   const messages = [
     {title:"Message 1", text:"This is message 1", active:true},
-    {title:"Message 2", text:"This is message 2", active:false}
+    {title:"Message 2", text:"This is message 2", active:false},
+    {title:"Message 3", text:"This is message 3", active:false}
   ]
 
   let active = false;
@@ -18,11 +19,7 @@ function App() {
     <div className="App">
 
     {
-      messages.map(messages => {
-        return (
-                <Message {...messages}/>
-              )
-      })
+      messages.map(messages => <Message {...messages}/>)
     }
       
 
