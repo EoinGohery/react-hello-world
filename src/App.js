@@ -7,14 +7,23 @@ import  {Message} from './FunctionalMessageComponent';
 
 function App() {
 
+  const messages = [
+    {title:"Message 1", text:"This is message 1", active:true},
+    {title:"Message 2", text:"This is message 2", active:false}
+  ]
+
   let active = false;
 
   return (
     <div className="App">
 
-      <Message title="Message 1" text="This is message 1" active={active}/>
+      <Message {...messages[0]}/>
 
-      <Message title="Message 2" text="This is message 2" active={true}/>
+      <Message title={messages[1].title} 
+      text={messages[1].text} 
+      active={messages[1].active}/>
+
+      <Message title="Message 3" text="This is message 3" active={true}/>
 
     </div>
   );
